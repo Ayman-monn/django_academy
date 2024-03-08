@@ -1,5 +1,16 @@
-<ul>
+{% extends 'base.html' %}
+{% load i18n %}
+{% load my_filter %}
+{% block content %}
+
+
+<ul class="list-group">
     {% for section in sections %}
-    <li>{{section.name}}</li>
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+      {{section.name}}
+      <span class="badge badge-primary badge-pill text-secondary">{{section.lesson_set.count}}</span>
+    </li>
     {% endfor %}
 </ul>
+
+{% endblock content %}

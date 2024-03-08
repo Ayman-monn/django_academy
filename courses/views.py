@@ -1,15 +1,17 @@
 from django.shortcuts import render
 from .models import Course, Section, Lesson, Comment
 
-def index(request): 
-    return render(request, 'index.html') 
-
-
 
 def courses_list(request):
     courses = Course.objects.all() 
-    return render(request, 'courses/courses_list.html',{
+    return render(request, 'index.html',{
         'courses':courses
+    })
+
+def course_detial(request, cid): 
+    course = Course.objects.get(pk=cid) 
+    return render(request, 'course_detail.html',{
+        'course':course 
     })
 
 def sections(request, cid): 
