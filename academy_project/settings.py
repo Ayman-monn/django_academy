@@ -38,7 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'courses',
-    'accounts', 
+    'accounts',
+    'checkout', 
+    # 'blog'
 ]
 
 MIDDLEWARE = [
@@ -131,3 +133,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/accounts/login/'
 
+STRIPE_PUBLIC_KEY = 'pk_test_51MLFqvCFibgoGNfAPrkCGGYAa0QSLtY8t3tNtqEK6gTOxImSf8u2C36Nc3nh7C74RT9T4TX2stp7rsNJxDY4RhqD00fg8M616b'
+STRIPE_SECRET_KEY = 'sk_test_51MLFqvCFibgoGNfAhN5kNUWqsGhQI4HzaUkVuqHMTZWoSHu90TmOvQz2xtvCp8D1XaszJ6DIuNnCu6FMZxp07caq000Bidp0H9'
+
+
+CURRENCY = 'USD'

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load my_filter %}
+{% block content %}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <ul class="list-group">
+                    {% for paid in courses %}
+                    <a href="{% url 'Course_section' paid.course.id%}">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            {{paid.course.name}}
+                            <span class="badge badge-primary badge-pill text-secondary">{{paid.course.section_set.count}}</span>
+                        </li>
+                    </a>
+                        {% endfor %}
+                </ul>
+
+        </div>
+      </div>
+ 
+  </div>
+
+{% endblock content %}

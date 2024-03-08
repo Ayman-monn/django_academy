@@ -41,7 +41,6 @@
             {% else %}
             <li><a class="dropdown-item" href="{% url 'login' %}">{% trans "Login" %}</a></li>
             <li><a class="dropdown-item" href="{% url 'register' %}">{% trans "Register" %}</a></li>
-
             {% endif %}
           </li>
         </ul>
@@ -54,12 +53,16 @@
         class="collapse navbar-collapse mt-2 mt-lg-0"
         id="navbarSupportedContent"
       >
-        <ul class="navbar-nav my-2 my-lg-0">
-          <li class="nav-item">
-            <a class="nav-link mx-1" href="" role="button">
-              {% trans "My Courses" %}
-            </a>
-          </li>
+      <ul class="navbar-nav my-2 my-lg-0">
+          {% if user.is_authenticated %}
+            {% if user.studentcourses_set.count > 0 %}
+            <li class="nav-item">
+              <a class="nav-link mx-1" href="{% url 'MyCourses' %}" role="button">
+                {% trans "My Courses" %}
+              </a>
+            </li>
+            {% endif %}
+          {% endif %}
         </ul>
       </div>
     </div>

@@ -6,6 +6,7 @@ from .models import Course, Section, Lesson, Comment, StudentCourses
 from django.db.models import Count 
 
 
+admin.site.register(StudentCourses)
 
 
 @admin.register(Course)

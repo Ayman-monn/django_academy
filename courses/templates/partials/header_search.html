@@ -1,5 +1,5 @@
 {% load i18n%}
-<form action="" class="d-flex mx-auto">
+<form action="{% url 'Courses_list' %}" class="d-flex mx-auto">
     <div class="input-group">
       <input
         name='query'
@@ -9,16 +9,6 @@
         placeholder="{% trans 'Search' %}"
         value ="{{ request.GET.query }}" 
       />
-      <select class="form-control" style="width: 160px" name='category' >
-        <option vlaue="">{% trans 'All Categories'%}</option>
-        <!-- {% for category in categories %} -->
-          <option 
-            value="{{ category.id }}"
-            {% if category.id|stringformat:'i' == request.GET.category %} selected {% endif %}
-          <!-- >{{ category.name }} -->
-          </option>
-        <!-- {% endfor %} -->
-      </select>
       <button class="btn btn-primary" type="submit">
         <i class="lni lni-search-alt text-white"></i>
       </button>
