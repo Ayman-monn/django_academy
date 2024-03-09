@@ -28,7 +28,6 @@
               <p class="card-text fs-4">
                 <strong class="text-success mt-3"> {{ course.price | currency }} </strong>
               </p>
-              <a href="{% url 'course/access' course.id%}" class="btn btn-primary">{% trans "Subscribe Now" %}</a>
             </div>
           </div>
         </div>
@@ -101,6 +100,8 @@
     </section>
     <!-- Display a payment form -->
     <!-- Display a payment form -->
+    <div id="pay-rom">
+
     <form id="payment-form">
       {% csrf_token %}
       <div id="payment-element">
@@ -112,6 +113,7 @@
       </button>
       <div id="payment-message" class="hidden"></div>
     </form>
+  </div>
    <script >
 
 const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;

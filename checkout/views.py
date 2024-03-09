@@ -10,7 +10,10 @@ import math
 
 
 def create_payment(request, pk):
-    course = Course.objects.get(pk=pk) 
+    course = Course.objects.get(pk=pk)
+    # student = StudentCourses.objects.select_related('user', 'course').get(course =course) 
+    # if student: 
+    #     return redirect('MyCourses')
     try:
         stripe.api_key = settings.STRIPE_SECRET_KEY
         intent = stripe.PaymentIntent.create(
@@ -18,8 +21,8 @@ def create_payment(request, pk):
             currency=settings.CURRENCY,
             payment_method_types=['card'],
             metadata={
-                'user_id': request.user.id, 
-                'course_id': course.id
+                'course_id': course.id,
+                'user_id': request.user.id
             }
         )
         return JsonResponse({
