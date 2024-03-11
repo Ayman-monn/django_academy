@@ -8,7 +8,6 @@ from django.db.models import Count
 
 admin.site.register(StudentCourses)
 
-
 @admin.register(Course)
 class CourseAdmin(admin.ModelAdmin): 
     list_display = ['name', 'image', 'price', 'section_count', 'lesson_count'] 
@@ -65,6 +64,8 @@ class CommentAdmin(admin.ModelAdmin):
     list_display = ['lesson', 'user', 'created_at']  
     list_select_related = ['user', 'lesson'] 
     list_per_page = 30 
+
+
 
 
 

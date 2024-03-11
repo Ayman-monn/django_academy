@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User 
+from ckeditor_uploader.fields import RichTextUploadingField
 
 class Course(models.Model):
     name = models.CharField(max_length=155) 
@@ -47,8 +48,7 @@ class Lesson(models.Model):
     
 
 class Comment(models.Model): 
-    body = models.TextField() 
-    image = models.ImageField(upload_to='comment/') 
+    body = RichTextUploadingField() 
     # relational fields 
     lesson = models.ForeignKey(Lesson, on_delete=models.CASCADE) 
     user = models.ForeignKey(User, on_delete=models.PROTECT)
@@ -67,9 +67,9 @@ class Comment(models.Model):
 class StudentCourses(models.Model):     
     user = models.ForeignKey(User, on_delete=models.CASCADE)  
     course = models.ForeignKey(Course, on_delete=models.CASCADE) 
-
     created_at = models.DateTimeField(auto_now_add=True) 
     updated_at = models.DateTimeField(auto_now=True) 
+
 
 
 

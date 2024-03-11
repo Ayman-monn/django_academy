@@ -1,0 +1,29 @@
+{% extends "blog.html" %}
+{% load i18n %}
+{% block body %}
+<a class="btn btn-primary btn-lg btn-block mt-4" href="{% url 'Post_create' %}">{% trans "Write Post" %}</a>
+    <div class="row mt-4">
+    {% for post in object_list %}
+    <div class="card mr-5" style="width: 18rem;">
+        <img src="{{post.image.url}}" class="card-img-top" alt="{{ post.id }}">
+        <div class="card-body">
+          <h5 class="card-title">{{post.title}}</h5>
+            <h6>{% trans "Author" %}: {{post.author}}
+            </h6>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"> {% trans "Date" %}: {{post.created_at|date:'D-m-Y'}}</li>
+        </ul>
+        <div class="card-body">
+          <a href="{% url 'Post_detail' post.id %}" class="card-link">{% trans "Show more" %}</a>
+        </div>
+      </div> 
+      {% empty %}  
+        <h3>
+          No posts to show 
+        </h3>
+    {% endfor %}
+    </div>
+{% endblock body %}
+
+

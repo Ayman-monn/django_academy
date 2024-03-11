@@ -37,10 +37,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'ckeditor',
+    'ckeditor_uploader',
     'courses',
     'accounts',
     'checkout', 
-    # 'blog'
+    'blog',
 ]
 
 MIDDLEWARE = [
@@ -144,3 +146,13 @@ EMAIL_HOST = 'sandbox.smtp.mailtrap.io'
 EMAIL_HOST_USER = '0e415938867f5d'
 EMAIL_HOST_PASSWORD = 'c3372c6cc4f101'
 EMAIL_PORT = '2525'
+
+
+
+# CKeditor Settings 
+CKEDITOR_UPLOAD_PATH = "uploads/"
+CKEDITOR_CONFIGS = {
+    "default": {
+        "versionCheck": False
+    }
+}
