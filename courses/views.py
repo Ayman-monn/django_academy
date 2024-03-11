@@ -1,8 +1,11 @@
 from django.shortcuts import redirect, render
-
+from django.urls import reverse
 from academy_project import settings
+from courses.forms import CommentForm
 from .models import Course, Section, Lesson, Comment, StudentCourses
 from django.contrib.auth.decorators import login_required 
+from django.views.generic import CreateView
+
 
 def courses_list(request):
     query = request.GET.get('query', '')
@@ -61,9 +64,28 @@ def lesson_list(request, sid):
 def lesson(request, lid): 
     course = Course.objects.get(lesson=lid) 
     student = StudentCourses.objects.filter(user = request.user, course = course)
+    form = CommentForm()
     if not student: 
         return redirect('Courses_list')
     lesson = Lesson.objects.get(pk=lid)
     return render(request, 'courses/lesson.html', {
-        'lesson':lesson 
+        'lesson':lesson, 
+        'form':form  
     })
+
+
+    
+
+class CommentCreateView(CreateView): 
+    model = Comment 
+    form_class = CommentForm
+    http_method_names = ['post']
+
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        lesson = Lesson.objects.get(pk= self.request.POST.get('lid'))
+        form.instance.lesson = lesson 
+        return super().form_valid(form)
+    
+    def get_success_url(self) -> str:
+        return reverse('Lesson', args=[self.object.lesson.id])

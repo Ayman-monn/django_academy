@@ -14,6 +14,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 class PostListView(ListView): 
     model = Post 
     template_name = 'posts/posts_list.html'
+    paginate_by = 3
 
     def get_queryset(self):
         query = super().get_queryset()
@@ -26,7 +27,7 @@ class PostListView(ListView):
 class UserPostListView(ListView): 
     model = Post 
     template_name = 'posts/posts_list.html'
-
+    paginate_by = 3
     def get_queryset(self):
         query = super().get_queryset()
         q = self.request.GET.get('q', None)

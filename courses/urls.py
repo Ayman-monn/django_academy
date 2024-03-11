@@ -10,4 +10,5 @@ urlpatterns = [
     path('course/sections/<int:cid>/', views.sections, name="Course_section"), 
     path('course/section/lessons/<int:sid>/', views.lesson_list, name="Course_section_lessons"), 
     path('course/section/lessons/lesson/<int:lid>/', views.lesson, name="Lesson"), 
+    path('course/section/lesson/comment/', views.CommentCreateView.as_view(), name="Lesson_comment"), 
 ]
