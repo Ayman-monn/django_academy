@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-12 03:08+0200\n"
+"POT-Creation-Date: 2024-03-12 04:34+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,9 +19,89 @@ msgstr ""
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 
-#: .\courses\forms.py:16
+#: .\courses\forms.py:16 .\courses\models.py:59
 msgid "Body"
 msgstr "التعليق"
+
+#: .\courses\models.py:6 .\courses\models.py:23 .\courses\models.py:41
+#, fuzzy
+#| msgid "App Name"
+msgid "Name"
+msgstr "مشروعي"
+
+#: .\courses\models.py:7
+msgid "Image"
+msgstr "أضف صورة"
+
+#: .\courses\models.py:8
+#, fuzzy
+#| msgid " Price"
+msgid "Price"
+msgstr "السعر"
+
+#: .\courses\models.py:9
+#, fuzzy
+#| msgid "Description"
+msgid "Short_description"
+msgstr "الوصف"
+
+#: .\courses\models.py:10 .\courses\models.py:42
+#: .\courses\templates\course_detail.html:55
+msgid "Description"
+msgstr "الوصف"
+
+#: .\courses\models.py:11
+msgid "Info"
+msgstr "معلومات"
+
+#: .\courses\models.py:18
+#, fuzzy
+#| msgid " Course"
+msgid "Course"
+msgstr "الدروة"
+
+#: .\courses\models.py:19
+#, fuzzy
+#| msgid " Course"
+msgid "Courses"
+msgstr "الدروة"
+
+#: .\courses\models.py:31
+#, fuzzy
+#| msgid "Description"
+msgid "Section"
+msgstr "الوصف"
+
+#: .\courses\models.py:32
+#, fuzzy
+#| msgid "Description"
+msgid "Sections"
+msgstr "الوصف"
+
+#: .\courses\models.py:43
+msgid "Video"
+msgstr "أضف فيديو"
+
+#: .\courses\models.py:51
+#, fuzzy
+#| msgid "lessons"
+msgid "Lesson"
+msgstr "الدروس"
+
+#: .\courses\models.py:52
+#, fuzzy
+#| msgid "lessons"
+msgid "Lessons"
+msgstr "الدروس"
+
+#: .\courses\models.py:68 .\courses\templates\courses\lesson.html:54
+#: .\courses\templates\courses\lesson_comment.html:12
+msgid "Comment"
+msgstr "تعليق"
+
+#: .\courses\models.py:69 .\courses\templates\courses\lesson.html:23
+msgid "Comments"
+msgstr "التعليقات"
 
 #: .\courses\templates\base.html:9 .\courses\templates\partials\header.html:4
 msgid "App Name"
@@ -35,26 +115,13 @@ msgstr "اضافة إلي السلة"
 msgid "View"
 msgstr "عرض"
 
-#: .\courses\templates\course_detail.html:55
-msgid "Description"
-msgstr "الوصف"
-
 #: .\courses\templates\course_detail.html:69
 msgid "History"
 msgstr "تاريخ"
 
-#: .\courses\templates\courses\lesson.html:23
-msgid "Comments"
-msgstr "التعليقات"
-
 #: .\courses\templates\courses\lesson.html:33
 msgid "Date"
 msgstr "التاريخ"
-
-#: .\courses\templates\courses\lesson.html:54
-#: .\courses\templates\courses\lesson_comment.html:12
-msgid "Comment"
-msgstr "تعليق"
 
 #: .\courses\templates\courses\sections.html:18
 msgid "lessons"
@@ -81,7 +148,7 @@ msgstr "السعر"
 msgid "Total"
 msgstr "الاجمالي"
 
-#: .\courses\templates\partials\footer.html:4
+#: .\courses\templates\partials\footer.html:19
 msgid "© 2022 All rights reseerved"
 msgstr "جميع الحقوق محفوظة"
 

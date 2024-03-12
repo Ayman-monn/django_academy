@@ -20,42 +20,42 @@ msgstr ""
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 #: .\accounts\forms.py:13 .\accounts\forms.py:34
 msgid "Username"
-msgstr ""
+msgstr "اسم المستخدم"
 
 #: .\accounts\forms.py:17 .\accounts\forms.py:43
 msgid "Password"
-msgstr ""
+msgstr "كلمة المرور"
 
 #: .\accounts\forms.py:24
 msgid "First Name"
-msgstr ""
+msgstr "الأسم الأول"
 
 #: .\accounts\forms.py:29
 msgid "Last Name"
-msgstr ""
+msgstr "الاسم الاخير"
 
 #: .\accounts\forms.py:39
 msgid "Email"
-msgstr ""
+msgstr "البريد الالكتروني"
 
 #: .\accounts\forms.py:49
 msgid "Password Confirmation"
-msgstr ""
+msgstr "تأكيد كلمة المرور"
 
 #: .\accounts\templates\profile.html:8
 msgid "Profile"
-msgstr ""
+msgstr "الملف الشخصي"
 
 #: .\accounts\templates\profile.html:15
 msgid "Save"
-msgstr ""
+msgstr "حفظ"
 
 #: .\accounts\templates\registration\login.html:8
 #: .\accounts\templates\registration\login.html:15
 msgid "Login"
-msgstr ""
+msgstr "تسيجل الدخول"
 
 #: .\accounts\templates\registration\register.html:8
 #: .\accounts\templates\registration\register.html:15
 msgid "Register"
-msgstr ""
+msgstr "التسجيل"
