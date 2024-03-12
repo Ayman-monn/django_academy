@@ -1,0 +1,114 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-03-12 03:08+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+
+#: .\courses\forms.py:16
+msgid "Body"
+msgstr "التعليق"
+
+#: .\courses\templates\base.html:9 .\courses\templates\partials\header.html:4
+msgid "App Name"
+msgstr "مشروعي"
+
+#: .\courses\templates\common\product_card.html:16
+msgid "Add To Cart"
+msgstr "اضافة إلي السلة"
+
+#: .\courses\templates\common\product_card.html:19
+msgid "View"
+msgstr "عرض"
+
+#: .\courses\templates\course_detail.html:55
+msgid "Description"
+msgstr "الوصف"
+
+#: .\courses\templates\course_detail.html:69
+msgid "History"
+msgstr "تاريخ"
+
+#: .\courses\templates\courses\lesson.html:23
+msgid "Comments"
+msgstr "التعليقات"
+
+#: .\courses\templates\courses\lesson.html:33
+msgid "Date"
+msgstr "التاريخ"
+
+#: .\courses\templates\courses\lesson.html:54
+#: .\courses\templates\courses\lesson_comment.html:12
+msgid "Comment"
+msgstr "تعليق"
+
+#: .\courses\templates\courses\sections.html:18
+msgid "lessons"
+msgstr "الدروس"
+
+#: .\courses\templates\emails\course.html:50
+msgid "Academy"
+msgstr "الاكاديمية"
+
+#: .\courses\templates\emails\course.html:60
+msgid " Customer"
+msgstr "الزبون"
+
+#: .\courses\templates\emails\course.html:74
+#: .\courses\templates\emails\course.html:130
+msgid " Course"
+msgstr "الدروة"
+
+#: .\courses\templates\emails\course.html:141
+msgid " Price"
+msgstr "السعر"
+
+#: .\courses\templates\emails\course.html:178
+msgid "Total"
+msgstr "الاجمالي"
+
+#: .\courses\templates\partials\footer.html:4
+msgid "© 2022 All rights reseerved"
+msgstr "جميع الحقوق محفوظة"
+
+#: .\courses\templates\partials\header.html:29
+msgid "Profile"
+msgstr "الملف الشخصي"
+
+#: .\courses\templates\partials\header.html:35
+msgid "Log out"
+msgstr "تسجيل الخروج"
+
+#: .\courses\templates\partials\header.html:42
+msgid "Login"
+msgstr "تسجيل الدخول"
+
+#: .\courses\templates\partials\header.html:43
+msgid "Register"
+msgstr "التسجيل"
+
+#: .\courses\templates\partials\header.html:61
+msgid "My Courses"
+msgstr "دوراتي"
+
+#: .\courses\templates\partials\header.html:67
+msgid "Blog"
+msgstr "المدونة"
+
+#: .\courses\templates\partials\header_search.html:9
+msgid "Search"
+msgstr "بحث"

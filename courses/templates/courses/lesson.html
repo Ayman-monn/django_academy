@@ -3,6 +3,11 @@
 {% load my_filter %}
 {% block content %}
 <div class="card mb-3">
+    <div class="card-head">
+        <h2>
+            {{lesson.course.name}}>{{lesson.section.name}}>{{lesson.name}}
+        </h2>
+    </div>
     <video class="card-img-top" width="600" height="600" controls>
     <source src="{{ lesson.video.url }}" type="video/mp4">
 </video> 
