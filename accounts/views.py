@@ -1,3 +1,5 @@
+from django.http import HttpRequest
+from django.http.response import HttpResponse as HttpResponse
 from django.shortcuts import redirect, render
 from django.urls import reverse_lazy
 from django.views.generic import CreateView
@@ -8,15 +10,14 @@ from django.contrib.auth.mixins import UserPassesTestMixin
 
 
 
-class RegisterView(UserPassesTestMixin, CreateView): 
+class RegisterView(CreateView): 
     form_class = UserRegisterForm 
     template_name = 'registration/register.html'
 
-    def test_func(self) -> bool | None:
-        us = self.request.user.is_anonymous
-        if us: 
-            return False 
-    
+    def dispatch(self, request: HttpRequest, *args, **kwargs):
+        if request.user.is_authenticated:
+            return redirect('Courses_list')
+        return super().dispatch(request, *args, **kwargs)
     def get_success_url(self) -> str:
         login(self.request, self.object) 
         return reverse_lazy('Courses_list')
