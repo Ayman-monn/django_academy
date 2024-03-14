@@ -14,10 +14,11 @@ class RegisterView(CreateView):
     form_class = UserRegisterForm 
     template_name = 'registration/register.html'
 
-    def dispatch(self, request: HttpRequest, *args, **kwargs):
+    def dispatch(self, request, *args, **kwargs):
         if request.user.is_authenticated:
             return redirect('Courses_list')
         return super().dispatch(request, *args, **kwargs)
+    
     def get_success_url(self) -> str:
         login(self.request, self.object) 
         return reverse_lazy('Courses_list')
