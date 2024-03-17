@@ -23,10 +23,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-k$^4(gv+az(p750r6^k+36p=0z3im&t+37f^g_ui^48elvbq-g'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
-    '127.0.0.1'
+    # '127.0.0.1'
 ]
 
 
@@ -57,6 +57,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'accounts.views.UserRestrictionMiddleware'
 ]
 
 ROOT_URLCONF = 'academy_project.urls'
