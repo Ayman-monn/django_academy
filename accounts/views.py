@@ -14,7 +14,7 @@ class RegisterView(CreateView):
 
     def get_success_url(self) -> str:
         login(self.request, self.object) 
-        return reverse('Courses_list')
+        return reverse('register/success')
 
 @login_required
 def edit_profile(request): 
@@ -36,6 +36,9 @@ class UserRestrictionMiddleware(MiddlewareMixin):
     def process_request(self, request):
         if request.user.is_authenticated:
             current_url = resolve(request.path_info).url_name
-            print(current_url)
-            if current_url.startswith('login') or current_url.startswith('register'):
+            # if current_url.startswith('login') or current_url.startswith('register'):
+            if current_url== 'login' or current_url == 'register':
                 return redirect('Courses_list')
+
+def registration_success(request):
+    return render(request, 'success_register.html')
